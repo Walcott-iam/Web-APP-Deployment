@@ -23,12 +23,24 @@ Azure automatically generated a GitHub Actions workflow (`.github/workflows`) in
 
 ![The GitHub Actions tab or the .github folder](https://github.com/Walcott-iam/Web-APP-Deployment/blob/main/cicdmagic.png)
 
-## Step 4: Secrets & Environment Management
+## Step 4: Object Storage
+To demonstrate object storage capabilities, I provisioned an Azure Storage Account (Standard LRS) and created a Blob container to host website assets. 
+
+![Your Storage Account container with the uploaded file](https://github.com/Walcott-iam/Web-APP-Deployment/blob/main/storage%20acc%20container.png)
+
+## Step 5: Cloud Monitoring & IAM Policies
+I utilized Azure Monitor to track metrics (such as requests and bandwidth) for the web app. Furthermore, I verified Identity and Access Management (IAM) policies at the Resource Group level to ensure proper role assignments.
+
+![The Azure Metrics graph](https://github.com/Walcott-iam/Web-APP-Deployment/blob/main/cloud%20monitoring.png)
+
+![The IAM Role Assignments page showing your Owner role](https://github.com/Walcott-iam/Web-APP-Deployment/blob/main/IAM.png)
+
+## Step 6: Secrets & Environment Management
 To secure the deployment, I managed environment variables and secrets directly within GitHub. I created an `APP_ENVIRONMENT` secret to represent the production environment, and Azure securely injected its deployment token. This ensures no sensitive credentials are hardcoded in the application code.
 
 ![The GitHub Secrets page showing APP_ENVIRONMENT and the AZURE token](https://github.com/Walcott-iam/Web-APP-Deployment/blob/main/secret%20management.png)
 
-## Step 5: Live Testing & Verification
+## Step 7: Live Testing & Verification
 The deployment was successful, and the static web app is now live on the internet, served securely over HTTPS via Azure's global edge network.
 
 *Live Website:* [https://proud-bay-07f9e5010.4.azurestaticapps.net/]
